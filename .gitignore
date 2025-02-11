@@ -1,6 +1,7 @@
 # .gitignore
 task.md
 eks-cluster/
+cicd-eks-cluster/
 
 # terraform
 terraform.tfstate
