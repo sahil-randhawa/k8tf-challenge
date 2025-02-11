@@ -12,7 +12,7 @@ jobs:
 
   Apply:
     needs: Plan
-    uses: sahil-randhawa/k8tf-challenge/.github/workflows/aws_tf_appy.yml@main
+    uses: sahil-randhawa/k8tf-challenge/.github/workflows/aws_tf_apply.yml@main
     with:
       gh_environment: dev
     secrets:
