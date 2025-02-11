@@ -5,6 +5,7 @@
   - [1. Kubernetes Webserver Deployment](#1-kubernetes-webserver-deployment)
   - [1.2 Helm Charts](#12-helm-charts)
   - [2. Terraform Code](#2-terraform-code)
+  - [3. CICD Terraform EKS](#3-cicd-terraform-eks)
 
 
 ## 1. Kubernetes Webserver Deployment:
@@ -204,6 +205,23 @@ terraform show
 ```bash
 terraform destroy
 ```
+
+
+
+---
+
+## 3. CICD Terraform EKS:
+
+- The CI/CD pipeline is implemented using GitHub Actions.
+- Workflow trigger: Manual
+- Backend: Terraform Cloud 
+- Resources: EKS cluster, Worker nodes, VPC, Security Group, IAM roles
+
+__Workflow files__: 
+`.github/workflows/eks.yml`
+`.github/workflows/eks_destroy.yml`
+
+> Disclosure: I referred to a few different resources to implement the CI/CD pipeline for Terraform and EKS.
 
 ---
 
