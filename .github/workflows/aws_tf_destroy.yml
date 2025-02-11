@@ -61,6 +61,3 @@ jobs:
 
       - name: Terraform Destroy
         run: terraform destroy -auto-approve
-
-      - name: Print assumed role
-        run: aws sts get-caller-identity
