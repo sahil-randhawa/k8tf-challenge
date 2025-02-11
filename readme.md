@@ -2,7 +2,6 @@
 
 ## Table of Contents
 
-- [Tasks](#tasks)
   - [1. Kubernetes Webserver Deployment](#1-kubernetes-webserver-deployment)
   - [1.2 Helm Charts](#12-helm-charts)
   - [2. Terraform Code](#2-terraform-code)
