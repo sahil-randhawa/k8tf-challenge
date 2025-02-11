@@ -22,9 +22,9 @@ resource "random_shuffle" "az_list" {
   result_count = 2
 }
 
-resource "aws_subnet" "public_cyderes-sahil-sh_subnet" {
+resource "aws_subnet" "public_cyderes-sahil-gh_subnet" {
   count                   = var.public_sn_count
-  vpc_id                  = aws_vpc.cyderes-sahil-sh.id
+  vpc_id                  = aws_vpc.cyderes-sahil-gh.id
   cidr_block              = var.public_cidrs[count.index]
   availability_zone       = random_shuffle.az_list.result[count.index]
   map_public_ip_on_launch = var.map_public_ip_on_launch
@@ -47,6 +47,6 @@ resource "aws_default_route_table" "internal_cyderes-sahil-gh_default" {
 
 resource "aws_route_table_association" "default" {
   count          = var.public_sn_count
-  subnet_id      = aws_subnet.public_cyderes-sahil-sh_subnet[count.index].id
-  route_table_id = aws_default_route_table.internal_cyderes-sahil-sh_default.id
+  subnet_id      = aws_subnet.public_cyderes-sahil-gh_subnet[count.index].id
+  route_table_id = aws_default_route_table.internal_cyderes-sahil-gh_default.id
 }
