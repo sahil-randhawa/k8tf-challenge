@@ -206,3 +206,7 @@ terraform destroy
 ```
 
 ---
+
+If any further explanation is required please feel free to ping me on my email (sahildeep.randhawa@gmail.com).
+
+Thank you
