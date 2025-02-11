@@ -32,7 +32,10 @@ jobs:
         with:
           sparse-checkout: |
             cicd-eks-cluster/terraform
-
+      
+      - name: Move Terraform Files
+        run: mv cicd-eks-cluster/terraform/* .
+        
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2.0.2
         with:

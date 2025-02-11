@@ -30,15 +30,15 @@ jobs:
         with:
           sparse-checkout: |
             cicd-eks-cluster/terraform
+
+      - name: Move Terraform Files
+        run: mv cicd-eks-cluster/terraform/* .
         
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2.0.2
         with:
           terraform_version: ${{ inputs.tf_version }}
           cli_config_credentials_token: ${{ secrets.cli_config_credentials_token }}
-
-      - name: list files
-        run: ls -la 
 
       - name: Terraform Init
         id: init
