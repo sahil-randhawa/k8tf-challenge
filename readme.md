@@ -221,7 +221,7 @@ __Workflow files__:
 `.github/workflows/eks.yml`
 `.github/workflows/eks_destroy.yml`
 
-> Disclosure: I referred to a few different resources to implement the CI/CD pipeline for Terraform and EKS.
+> Disclosure: For this section (Step 3), I referred to a few different resources to implement the CI/CD pipeline for Terraform and EKS.
 
 ---
 
