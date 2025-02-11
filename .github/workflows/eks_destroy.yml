@@ -1,0 +1,11 @@
+name: "EKS Destroy"
+on:
+  workflow_dispatch:
+
+jobs:
+    Destroy:
+        uses: sahil-randhawa/k8tf-challenge/.github/workflows/aws_tf_destroy.yml@main
+        with:
+          gh_environment: dev
+        secrets:
+          cli_config_credentials_token: ${{ secrets.TFC_API_TOKEN }}
